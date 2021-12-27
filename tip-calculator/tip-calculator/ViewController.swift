@@ -53,9 +53,18 @@ class ViewController: UIViewController {
         let tipPercentages = [defaults.double(forKey: "defTip1") , defaults.double(forKey: "defTip2") , defaults.double(forKey: "defTip3")]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-
-        tipAmountLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        
+        let locale = Locale.current
+        let currencyCode = locale.currencyCode!
+        
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        // localize to your grouping and decimal separator
+        currencyFormatter.locale = Locale.current
+        
+        tipAmountLabel.text = String(currencyCode) + String(format: "%@", currencyFormatter.string(from: NSNumber(value: tip))!)
+        totalLabel.text = String(currencyCode) + String(format: "%@", currencyFormatter.string(from: NSNumber(value: total))!)
     }
     
     //method on how to calculate tip

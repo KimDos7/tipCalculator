@@ -76,6 +76,7 @@ class SettingsViewController: UIViewController {
         if sender.isOn {
             overrideUserInterfaceStyle = .dark
             def.set(true, forKey: "darkModeOn")
+            
         } else {
             overrideUserInterfaceStyle = .light
             def.set(false, forKey: "darkModeOn")
