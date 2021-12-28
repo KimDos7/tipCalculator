@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Tip Calculator"
+    // self.title = "Tip Calculator"
+        self.billAmountTextField.becomeFirstResponder()
 //        defaults.set(0.15, forKey: "defTip1")
 //        defaults.set(0.18, forKey: "defTip2")
 //        defaults.set(0.2, forKey: "defTip3")

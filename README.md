@@ -19,7 +19,7 @@ The following **optional** features are implemented:
 * [ ] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [X] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
@@ -37,7 +37,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app:
+
+This is my first time diving into swift and IOS development in general so the entire project was a great but challenging experience. The first biggest conflict was realizing what "!" actually did in my code and why it was so necessary thorughout the entire project. This solved my big issue in the error CArgV threw at me when I wanted to format my numbers by the thousand marker. Then, with events, I found that I could do the project based on event changed, rather than end, helping me resolve several issues like updating total the moment bill amount has changed. 
+The keyboard would not show up what so ever and I thought this was a coding issue, but after looking through online, it turned out that I needed to use Command + K to use the software keyboard instead of my mac. 
+
 
 ## License
 
